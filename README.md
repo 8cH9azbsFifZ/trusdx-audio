@@ -33,15 +33,19 @@ You'll need a Windows 8/10/11 or Linux PC (Raspberry PI 3 or better should be fi
 
 * Connect the (tr)uSDX to the USB port, set volume to 10
 
+* *Important:* Make sure that menu-item 2.4 Semi-QSK is set to OFF
+
 * Run from Start Menu the application: `truSDX Driver`
 
 Start a digital modes app (e.g WSJT-X) and select in Radio settings:
 - Rig: Kendwood TS-480 (you can also use TS-440 if not available. You can also opt to not use any CAT control if you prefer)
-- Poll Interval: 80
+- *Important:* Poll Interval: 80
 - Serial Port: COM8
 - Baud Rate: 115200
 - PTT Method:  either CAT, or DTR/RTS with port COM8
 - In Audio tab, select: for Input: `CABLE Output`, and for Output: `CABLE Input`
+
+It is also possible to run the driver from Python3 manually without using above setup; install Python3 (from python.org), and trusdx-audio source code, run from command prompt: python -m  pip install pyaudio serial serial-tool, and then run: python trusdx-txrx.py
 
 ## Installation Linux / MacOS
 

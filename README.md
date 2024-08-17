@@ -95,6 +95,16 @@ Start a digital modes app (e.g WSJT-X) and select in Radio settings:
   - on Linux: `TRUSDX` input audio device and `TRUSDX` output audio device
   - on MacOS: `BlackHole 2ch` input audio device and `BlackHole 2ch` output audio device
 
+
+# Mac OS with VENV
+```
+brew install portaudio
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 trusdx-txrx.py -v
+```
+
 ## Notes
 This software is experimental, no warranty or service included.
 
